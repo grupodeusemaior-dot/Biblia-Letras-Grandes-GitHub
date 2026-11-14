@@ -1,0 +1,17 @@
+PROGRAMAS — BÍBLIA LETRAS GRANDES
+
+Esta pasta contém os arquivos do aplicativo.
+Junte as pastas de livros dentro de uma pasta chamada dados, ao lado de index.html:
+- dados/catalogo.json (já incluído aqui)
+- dados/AntigoTestamento/ (ZIP do Antigo Testamento)
+- dados/NovoTestamento/ (ZIP do Novo Testamento)
+
+Estrutura final esperada:
+index.html, app.js, style.css, manifest.webmanifest, service-worker.js
+dados/catalogo.json
+dados/AntigoTestamento/*.json
+dados/NovoTestamento/*.json
+icons/icon-192.png, icons/icon-512.png, icons/apple-touch-icon.png, icons/icon-maskable-512.png
+
+Crie também a pasta icons e coloque nela os quatro arquivos de imagem fornecidos.
+Abra index.html com Live Server para testar.

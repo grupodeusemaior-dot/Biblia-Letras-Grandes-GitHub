@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#102b55">
+  <meta name="description" content="Bíblia Sagrada em letras grandes — Renova-me Deus Meu.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Bíblia Letras Grandes">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Bíblia — Letras Grandes | Renova-me Deus Meu</title>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><img src="./icons/icon-192.png" alt=""><div><strong>BÍBLIA</strong><span>LETRAS GRANDES</span></div></div>
+  <div class="font-tools" aria-label="Tamanho do texto">
+    <button id="fontDown" aria-label="Diminuir letras">A−</button>
+    <button id="fontUp" aria-label="Aumentar letras">A+</button>
+  </div>
+</header>
+<main>
+  <section class="welcome" id="welcome">
+    <h1>Leia a Palavra de Deus com conforto.</h1>
+    <p>Escolha um testamento para começar.</p>
+    <div class="testaments">
+      <button class="testament" data-testament="Antigo Testamento"><span>ANTIGO</span><strong>Testamento</strong><small>39 livros</small></button>
+      <button class="testament" data-testament="Novo Testamento"><span>NOVO</span><strong>Testamento</strong><small>27 livros</small></button>
+    </div>
+  </section>
+  <section id="booksView" class="view" hidden>
+    <button class="back" id="backHome">← Voltar aos testamentos</button>
+    <h1 id="booksTitle"></h1><p>Escolha um livro.</p><div id="booksList" class="book-grid"></div>
+  </section>
+  <section id="chaptersView" class="view" hidden>
+    <button class="back" id="backBooks">← Voltar aos livros</button>
+    <h1 id="chaptersTitle"></h1><p>Escolha um capítulo.</p><div id="chaptersList" class="chapter-grid"></div>
+  </section>
+  <section id="readingView" class="view" hidden>
+    <button class="back" id="backChapters">← Voltar aos capítulos</button>
+    <div class="reading-heading"><h1 id="readingTitle"></h1><span id="translation"></span></div>
+    <article id="verses" class="verses"></article>
+    <nav class="chapter-nav"><button id="previousChapter">← Anterior</button><button id="nextChapter">Próximo →</button></nav>
+  </section>
+</main>
+<footer><strong>Renova-me Deus Meu</strong><span>Palavra, fé e vida</span></footer>
+<script src="./app.js"></script>
+</body>
+</html>

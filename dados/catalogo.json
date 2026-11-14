@@ -1,0 +1,464 @@
+[
+  {
+    "livro": "Gênesis",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 50,
+    "arquivo": "dados/AntigoTestamento/genesis.json"
+  },
+  {
+    "livro": "Êxodo",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 40,
+    "arquivo": "dados/AntigoTestamento/exodo.json"
+  },
+  {
+    "livro": "Levítico",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 27,
+    "arquivo": "dados/AntigoTestamento/levitico.json"
+  },
+  {
+    "livro": "Números",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 36,
+    "arquivo": "dados/AntigoTestamento/numeros.json"
+  },
+  {
+    "livro": "Deuteronômio",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 34,
+    "arquivo": "dados/AntigoTestamento/deuteronomio.json"
+  },
+  {
+    "livro": "Josué",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 24,
+    "arquivo": "dados/AntigoTestamento/josue.json"
+  },
+  {
+    "livro": "Juízes",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 21,
+    "arquivo": "dados/AntigoTestamento/juizes.json"
+  },
+  {
+    "livro": "Rute",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 4,
+    "arquivo": "dados/AntigoTestamento/rute.json"
+  },
+  {
+    "livro": "1 Samuel",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 31,
+    "arquivo": "dados/AntigoTestamento/1-samuel.json"
+  },
+  {
+    "livro": "2 Samuel",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 24,
+    "arquivo": "dados/AntigoTestamento/2-samuel.json"
+  },
+  {
+    "livro": "1 Reis",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 22,
+    "arquivo": "dados/AntigoTestamento/1-reis.json"
+  },
+  {
+    "livro": "2 Reis",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 25,
+    "arquivo": "dados/AntigoTestamento/2-reis.json"
+  },
+  {
+    "livro": "1 Crônicas",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 29,
+    "arquivo": "dados/AntigoTestamento/1-cronicas.json"
+  },
+  {
+    "livro": "2 Crônicas",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 36,
+    "arquivo": "dados/AntigoTestamento/2-cronicas.json"
+  },
+  {
+    "livro": "Esdras",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 10,
+    "arquivo": "dados/AntigoTestamento/esdras.json"
+  },
+  {
+    "livro": "Neemias",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 13,
+    "arquivo": "dados/AntigoTestamento/neemias.json"
+  },
+  {
+    "livro": "Ester",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 10,
+    "arquivo": "dados/AntigoTestamento/ester.json"
+  },
+  {
+    "livro": "Jó",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 42,
+    "arquivo": "dados/AntigoTestamento/jo.json"
+  },
+  {
+    "livro": "Salmos",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 150,
+    "arquivo": "dados/AntigoTestamento/salmos.json"
+  },
+  {
+    "livro": "Provérbios",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 31,
+    "arquivo": "dados/AntigoTestamento/proverbios.json"
+  },
+  {
+    "livro": "Eclesiastes",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 12,
+    "arquivo": "dados/AntigoTestamento/eclesiastes.json"
+  },
+  {
+    "livro": "Cânticos",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 8,
+    "arquivo": "dados/AntigoTestamento/canticos.json"
+  },
+  {
+    "livro": "Isaías",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 66,
+    "arquivo": "dados/AntigoTestamento/isaias.json"
+  },
+  {
+    "livro": "Jeremias",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 52,
+    "arquivo": "dados/AntigoTestamento/jeremias.json"
+  },
+  {
+    "livro": "Lamentações",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 5,
+    "arquivo": "dados/AntigoTestamento/lamentacoes.json"
+  },
+  {
+    "livro": "Ezequiel",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 48,
+    "arquivo": "dados/AntigoTestamento/ezequiel.json"
+  },
+  {
+    "livro": "Daniel",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 12,
+    "arquivo": "dados/AntigoTestamento/daniel.json"
+  },
+  {
+    "livro": "Oséias",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 14,
+    "arquivo": "dados/AntigoTestamento/oseias.json"
+  },
+  {
+    "livro": "Joel",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 3,
+    "arquivo": "dados/AntigoTestamento/joel.json"
+  },
+  {
+    "livro": "Amós",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 9,
+    "arquivo": "dados/AntigoTestamento/amos.json"
+  },
+  {
+    "livro": "Obadias",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 1,
+    "arquivo": "dados/AntigoTestamento/obadias.json"
+  },
+  {
+    "livro": "Jonas",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 4,
+    "arquivo": "dados/AntigoTestamento/jonas.json"
+  },
+  {
+    "livro": "Miquéias",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 7,
+    "arquivo": "dados/AntigoTestamento/miqueias.json"
+  },
+  {
+    "livro": "Naum",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 3,
+    "arquivo": "dados/AntigoTestamento/naum.json"
+  },
+  {
+    "livro": "Habacuque",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 3,
+    "arquivo": "dados/AntigoTestamento/habacuque.json"
+  },
+  {
+    "livro": "Sofonias",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 3,
+    "arquivo": "dados/AntigoTestamento/sofonias.json"
+  },
+  {
+    "livro": "Ageu",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 2,
+    "arquivo": "dados/AntigoTestamento/ageu.json"
+  },
+  {
+    "livro": "Zacarias",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 14,
+    "arquivo": "dados/AntigoTestamento/zacarias.json"
+  },
+  {
+    "livro": "Malaquias",
+    "testamento": "Antigo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 4,
+    "arquivo": "dados/AntigoTestamento/malaquias.json"
+  },
+  {
+    "livro": "Mateus",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 28,
+    "arquivo": "dados/NovoTestamento/mateus.json"
+  },
+  {
+    "livro": "Marcos",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 16,
+    "arquivo": "dados/NovoTestamento/marcos.json"
+  },
+  {
+    "livro": "Lucas",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 24,
+    "arquivo": "dados/NovoTestamento/lucas.json"
+  },
+  {
+    "livro": "João",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 21,
+    "arquivo": "dados/NovoTestamento/joao.json"
+  },
+  {
+    "livro": "Atos",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 28,
+    "arquivo": "dados/NovoTestamento/atos.json"
+  },
+  {
+    "livro": "Romanos",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 16,
+    "arquivo": "dados/NovoTestamento/romanos.json"
+  },
+  {
+    "livro": "1 Coríntios",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 16,
+    "arquivo": "dados/NovoTestamento/1-corintios.json"
+  },
+  {
+    "livro": "2 Coríntios",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 13,
+    "arquivo": "dados/NovoTestamento/2-corintios.json"
+  },
+  {
+    "livro": "Gálatas",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 6,
+    "arquivo": "dados/NovoTestamento/galatas.json"
+  },
+  {
+    "livro": "Efésios",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 6,
+    "arquivo": "dados/NovoTestamento/efesios.json"
+  },
+  {
+    "livro": "Filipenses",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 4,
+    "arquivo": "dados/NovoTestamento/filipenses.json"
+  },
+  {
+    "livro": "Colossenses",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 4,
+    "arquivo": "dados/NovoTestamento/colossenses.json"
+  },
+  {
+    "livro": "1 Tessalonicenses",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 5,
+    "arquivo": "dados/NovoTestamento/1-tessalonicenses.json"
+  },
+  {
+    "livro": "2 Tessalonicenses",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 3,
+    "arquivo": "dados/NovoTestamento/2-tessalonicenses.json"
+  },
+  {
+    "livro": "1 Timóteo",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 6,
+    "arquivo": "dados/NovoTestamento/1-timoteo.json"
+  },
+  {
+    "livro": "2 Timóteo",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 4,
+    "arquivo": "dados/NovoTestamento/2-timoteo.json"
+  },
+  {
+    "livro": "Tito",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 3,
+    "arquivo": "dados/NovoTestamento/tito.json"
+  },
+  {
+    "livro": "Filemom",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 1,
+    "arquivo": "dados/NovoTestamento/filemom.json"
+  },
+  {
+    "livro": "Hebreus",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 13,
+    "arquivo": "dados/NovoTestamento/hebreus.json"
+  },
+  {
+    "livro": "Tiago",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 5,
+    "arquivo": "dados/NovoTestamento/tiago.json"
+  },
+  {
+    "livro": "1 Pedro",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 5,
+    "arquivo": "dados/NovoTestamento/1-pedro.json"
+  },
+  {
+    "livro": "2 Pedro",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 3,
+    "arquivo": "dados/NovoTestamento/2-pedro.json"
+  },
+  {
+    "livro": "1 João",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 5,
+    "arquivo": "dados/NovoTestamento/1-joao.json"
+  },
+  {
+    "livro": "2 João",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 1,
+    "arquivo": "dados/NovoTestamento/2-joao.json"
+  },
+  {
+    "livro": "3 João",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 1,
+    "arquivo": "dados/NovoTestamento/3-joao.json"
+  },
+  {
+    "livro": "Judas",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 1,
+    "arquivo": "dados/NovoTestamento/judas.json"
+  },
+  {
+    "livro": "Apocalipse",
+    "testamento": "Novo Testamento",
+    "traducao": "JFAC1948",
+    "capitulos": 22,
+    "arquivo": "dados/NovoTestamento/apocalipse.json"
+  }
+]
