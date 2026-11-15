@@ -41,12 +41,14 @@
   </section>
   <section id="readingView" class="view" hidden>
     <button class="back" id="backChapters">← Voltar aos capítulos</button>
-    <div class="reading-heading"><h1 id="readingTitle"></h1><span id="translation"></span></div>
-    <div id="selectionTools" class="selection-tools" hidden aria-label="Ferramentas de estudo">
+    <div class="reading-heading">
+      <h1 id="readingTitle"></h1><span id="translation"></span>
+      <div id="selectionTools" class="selection-tools" hidden aria-label="Ferramentas de estudo">
       <span class="selection-hint">Texto selecionado</span>
       <button type="button" id="highlightSelection">🖍 Marcar</button>
       <button type="button" id="removeHighlight">Apagar marcação</button>
       <button type="button" id="annotateSelection">📝 Anotar</button>
+      </div>
     </div>
     <article id="verses" class="verses"></article>
     <aside id="notePanel" class="note-panel" hidden aria-live="polite">
