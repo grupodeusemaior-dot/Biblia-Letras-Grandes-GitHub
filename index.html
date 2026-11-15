@@ -42,10 +42,34 @@
   <section id="readingView" class="view" hidden>
     <button class="back" id="backChapters">← Voltar aos capítulos</button>
     <div class="reading-heading"><h1 id="readingTitle"></h1><span id="translation"></span></div>
+    <div id="selectionTools" class="selection-tools" hidden aria-label="Ferramentas de estudo">
+      <span class="selection-hint">Texto selecionado</span>
+      <button type="button" id="highlightSelection">🖍 Marcar</button>
+      <button type="button" id="removeHighlight">Apagar marcação</button>
+      <button type="button" id="annotateSelection">📝 Anotar</button>
+    </div>
     <article id="verses" class="verses"></article>
+    <aside id="notePanel" class="note-panel" hidden aria-live="polite">
+      <div class="note-panel-head"><strong>Minha anotação</strong><button type="button" id="closeNotePanel" aria-label="Fechar anotação">×</button></div>
+      <p id="notePanelQuote" class="note-quote"></p>
+      <p id="notePanelContent"></p>
+      <div class="note-actions"><button type="button" id="editNote">Editar</button><button type="button" id="deleteNote" class="danger">Apagar</button></div>
+    </aside>
     <nav class="chapter-nav"><button id="previousChapter">← Anterior</button><button id="nextChapter">Próximo →</button></nav>
   </section>
 </main>
+<dialog id="noteDialog" class="note-dialog">
+  <form id="noteForm" method="dialog">
+    <h2 id="noteDialogTitle">Nova anotação</h2>
+    <p id="noteDialogQuote" class="note-quote"></p>
+    <label for="noteInput">Sua anotação</label>
+    <textarea id="noteInput" rows="5" maxlength="3000" placeholder="Escreva sua reflexão sobre este trecho..."></textarea>
+    <div class="dialog-actions">
+      <button type="button" id="cancelNote">Cancelar</button>
+      <button type="submit" id="saveNote" class="primary">Salvar anotação</button>
+    </div>
+  </form>
+</dialog>
 <footer><strong>Renova-me Deus Meu</strong><span>Palavra, fé e vida</span></footer>
 <script src="./app.js"></script>
 </body>

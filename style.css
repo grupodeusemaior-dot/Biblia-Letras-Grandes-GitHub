@@ -31,3 +31,34 @@ footer{display:flex;flex-direction:column;align-items:center;padding:18px;color:
 button:focus-visible{outline:4px solid #efc64f;outline-offset:3px}
 @media(min-width:650px){.book-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.chapter-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.welcome,.view{padding:30px}}
 @media(max-width:420px){.testaments{grid-template-columns:1fr}.testament{min-height:112px}.brand img{width:46px;height:46px}.brand strong{font-size:1.15rem}.chapter-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+
+/* Leitura e ferramentas pessoais */
+.verse{text-align:justify;text-justify:inter-word;hyphens:auto}
+.verse-text{white-space:normal}
+.verse-mark{background:#ffef75;color:inherit;border-radius:3px;padding:0 .04em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.selection-tools{position:fixed;left:50%;transform:translateX(-50%);bottom:max(10px,env(safe-area-inset-bottom));width:min(900px,calc(100% - 20px));z-index:20;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:7px;margin:16px auto;padding:10px;background:#102b55;border:2px solid #e7b83f;border-radius:15px;box-shadow:0 5px 20px #0003}
+.selection-tools[hidden]{display:none}
+.selection-tools button,.note-actions button,.dialog-actions button{border:0;border-radius:9px;padding:9px 12px;font-weight:800;background:#fff;color:#102b55}
+.selection-tools #highlightSelection{background:#ffef75}
+.selection-tools #annotateSelection,.dialog-actions .primary{background:#e7b83f;color:#102b55}
+.selection-hint{color:#fff;font-size:.85rem;font-weight:700}
+.note-arrow{display:inline-flex;align-items:center;justify-content:center;margin-left:7px;width:27px;height:27px;border:0;border-radius:7px;background:#eaf0f8;color:#102b55;font-weight:900;vertical-align:middle}
+.note-arrow::before{content:"↳";font-size:1.1rem}
+.note-arrow:focus-visible{outline:3px solid #e7b83f}
+.note-panel{position:relative;margin:16px 0;padding:15px;background:#fff9d9;border:1px solid #e7c54c;border-left:5px solid #d5a91d;border-radius:12px;box-shadow:0 4px 14px #0001}
+.note-panel[hidden]{display:none}
+.note-panel-head{display:flex;justify-content:space-between;align-items:center;color:#654d08}
+.note-panel-head button{border:0;background:transparent;font-size:1.5rem;color:#654d08}
+.note-quote{font-style:italic;color:#58657a;font-size:.95rem;margin:8px 0}
+.note-actions{display:flex;gap:8px;margin-top:12px}
+.note-actions .danger{background:#fbe5e5;color:#922}
+.note-dialog{width:min(520px,calc(100% - 28px));border:0;border-radius:18px;padding:0;box-shadow:0 12px 45px #0005}
+.note-dialog::backdrop{background:#08162dcc}
+.note-dialog form{padding:22px}
+.note-dialog h2{color:#102b55;margin:0 0 10px}
+.note-dialog label{display:block;font-weight:800;margin:12px 0 6px;color:#102b55}
+.note-dialog textarea{display:block;width:100%;resize:vertical;border:2px solid #cbd6e6;border-radius:10px;padding:12px;font:inherit;line-height:1.5;color:#172238}
+.note-dialog textarea:focus{outline:3px solid #e7b83f;border-color:#1e477b}
+.dialog-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:15px}
+@media(max-width:480px){.selection-tools{bottom:6px;padding:8px}.selection-hint{width:100%;text-align:center}.selection-tools button{font-size:.9rem;padding:8px}.note-dialog form{padding:17px}}
