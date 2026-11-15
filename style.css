@@ -62,3 +62,28 @@ button:focus-visible{outline:4px solid #efc64f;outline-offset:3px}
 .note-dialog textarea:focus{outline:3px solid #e7b83f;border-color:#1e477b}
 .dialog-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:15px}
 @media(max-width:480px){.selection-tools{bottom:6px;padding:8px}.selection-hint{width:100%;text-align:center}.selection-tools button{font-size:.9rem;padding:8px}.note-dialog form{padding:17px}}
+
+
+/* Correção definitiva: controles A+/A- e leitura justificada */
+#verses {
+  font-size: var(--font-size, 1.35rem) !important;
+}
+#verses .verse {
+  display: block;
+  width: 100%;
+  font-size: var(--font-size, 1.35rem) !important;
+  line-height: 1.8;
+  text-align: justify !important;
+  text-justify: inter-word;
+  text-align-last: left;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+#verses .verse-text {
+  font-size: inherit !important;
+}
+#fontUp, #fontDown {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}

@@ -13,8 +13,18 @@ function show(id) {
   window.scrollTo({top: 0, behavior: "smooth"});
 }
 function setFont() {
-  state.font = Math.max(1, Math.min(2.4, Number(state.font.toFixed(2))));
-  document.documentElement.style.setProperty("--font-size", `${state.font}rem`);
+  state.font = Math.max(0.9, Math.min(2.6, Number(state.font.toFixed(2))));
+  const value = `${state.font}rem`;
+  document.documentElement.style.setProperty("--font-size", value);
+  // Aplica diretamente ao conteúdo bíblico, evitando que a regra global dos <p>
+  // impeça o funcionamento dos controles A+ e A-.
+  const article = $("verses");
+  if (article) {
+    article.style.setProperty("font-size", value, "important");
+    article.querySelectorAll(".verse, .verse-text").forEach(el => {
+      el.style.setProperty("font-size", value, "important");
+    });
+  }
   try { localStorage.setItem(FONT_KEY, String(state.font)); } catch (_) {}
 }
 function safeText(s) { return String(s ?? ""); }
@@ -63,6 +73,10 @@ function noteId() { return "note-" + Date.now() + "-" + Math.random().toString(3
 
 async function init() {
   loadStudyData();
+  // Registra os controles de fonte imediatamente, sem depender do catálogo.
+  $("fontUp").addEventListener("click", () => { state.font += .1; setFont(); });
+  $("fontDown").addEventListener("click", () => { state.font -= .1; setFont(); });
+  setFont();
   try {
     const r = await fetch("./dados/catalogo.json");
     if (!r.ok) throw Error("Não foi possível carregar o catálogo.");
@@ -72,8 +86,6 @@ async function init() {
   }
   setFont();
   document.querySelectorAll("[data-testament]").forEach(b => b.addEventListener("click", () => openTestament(b.dataset.testament)));
-  $("fontUp").addEventListener("click", () => { state.font += .1; setFont(); });
-  $("fontDown").addEventListener("click", () => { state.font -= .1; setFont(); });
   $("backHome").onclick = () => show("welcome");
   $("backBooks").onclick = () => openTestament(state.testament);
   $("backChapters").onclick = () => openBook(state.book);
@@ -155,6 +167,7 @@ async function openChapter(n) {
       article.append(p);
     });
     $("notePanel").hidden = true;
+    setFont(); // reaplica o tamanho escolhido aos versículos recém-renderizados
     $("previousChapter").disabled = n <= 1;
     $("nextChapter").disabled = n >= state.book.capitulos;
     $("selectionTools").hidden = true;

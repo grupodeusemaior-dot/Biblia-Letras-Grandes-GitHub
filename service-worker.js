@@ -1,4 +1,4 @@
-const CACHE = "biblia-letras-grandes-v2";
+const CACHE = "biblia-letras-grandes-v3";
 const CORE = [
   "./", "./index.html", "./style.css", "./app.js", "./manifest.webmanifest",
   "./dados/catalogo.json", "./icons/icon-192.png", "./icons/icon-512.png",

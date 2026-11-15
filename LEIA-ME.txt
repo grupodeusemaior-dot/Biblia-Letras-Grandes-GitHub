@@ -1,17 +1,24 @@
-PROGRAMAS — BÍBLIA LETRAS GRANDES
+CORREÇÃO — BÍBLIA LETRAS GRANDES
 
-Esta pasta contém os arquivos do aplicativo.
-Junte as pastas de livros dentro de uma pasta chamada dados, ao lado de index.html:
-- dados/catalogo.json (já incluído aqui)
-- dados/AntigoTestamento/ (ZIP do Antigo Testamento)
-- dados/NovoTestamento/ (ZIP do Novo Testamento)
+Arquivos incluídos:
+- app.js
+- style.css
+- service-worker.js
 
-Estrutura final esperada:
-index.html, app.js, style.css, manifest.webmanifest, service-worker.js
-dados/catalogo.json
-dados/AntigoTestamento/*.json
-dados/NovoTestamento/*.json
-icons/icon-192.png, icons/icon-512.png, icons/apple-touch-icon.png, icons/icon-maskable-512.png
+COMO APLICAR NO GITHUB WEB:
+1. Extraia este ZIP no computador.
+2. Abra o repositório do aplicativo no GitHub.
+3. Na raiz do repositório, clique em Add file > Upload files.
+4. Envie os três arquivos para a raiz, substituindo os arquivos de mesmo nome.
+5. Clique em Commit changes e confirme na branch main.
+6. Aguarde o GitHub Pages atualizar.
+7. No celular, feche o app completamente e abra novamente. Se continuar mostrando a versão antiga, abra o site no navegador e atualize a página; depois abra o app instalado novamente.
 
-Crie também a pasta icons e coloque nela os quatro arquivos de imagem fornecidos.
-Abra index.html com Live Server para testar.
+O QUE FOI CORRIGIDO:
+- A regra global p { font-size: ... } estava sobrepondo o tamanho herdado do artigo. Agora os versículos recebem diretamente o tamanho escolhido.
+- O A+ e A- são registrados imediatamente e o tamanho é reaplicado quando cada capítulo é carregado.
+- Os versículos têm regra específica e prioritária de alinhamento justificado.
+- O cache foi atualizado para v3.
+
+Não substitua os arquivos JSON, imagens, catálogo ou index.html.
+As marcações e anotações existentes continuam no localStorage e não são apagadas por esta atualização.
