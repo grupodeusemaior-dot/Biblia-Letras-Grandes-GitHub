@@ -1,24 +1,15 @@
-CORREÇÃO — BÍBLIA LETRAS GRANDES
+ATUALIZAÇÃO — FERRAMENTAS DE ESTUDO NO TOPO
 
-Arquivos incluídos:
-- app.js
-- style.css
-- service-worker.js
+Esta atualização altera somente a posição da barra que aparece quando um trecho bíblico é selecionado.
 
-COMO APLICAR NO GITHUB WEB:
-1. Extraia este ZIP no computador.
-2. Abra o repositório do aplicativo no GitHub.
-3. Na raiz do repositório, clique em Add file > Upload files.
-4. Envie os três arquivos para a raiz, substituindo os arquivos de mesmo nome.
-5. Clique em Commit changes e confirme na branch main.
-6. Aguarde o GitHub Pages atualizar.
-7. No celular, feche o app completamente e abra novamente. Se continuar mostrando a versão antiga, abra o site no navegador e atualize a página; depois abra o app instalado novamente.
+O que mudou:
+- A barra de ferramentas deixa de ficar fixa na parte inferior.
+- Ela passa a aparecer logo abaixo do cabeçalho, na parte superior da área de leitura.
+- Assim, o menu de seleção/pesquisa do Google na parte inferior não encobre os botões.
 
-O QUE FOI CORRIGIDO:
-- A regra global p { font-size: ... } estava sobrepondo o tamanho herdado do artigo. Agora os versículos recebem diretamente o tamanho escolhido.
-- O A+ e A- são registrados imediatamente e o tamanho é reaplicado quando cada capítulo é carregado.
-- Os versículos têm regra específica e prioritária de alinhamento justificado.
-- O cache foi atualizado para v3.
+Arquivos para substituir na raiz do projeto:
+1. style.css
+2. service-worker.js
 
-Não substitua os arquivos JSON, imagens, catálogo ou index.html.
-As marcações e anotações existentes continuam no localStorage e não são apagadas por esta atualização.
+Não substitua app.js, index.html nem a pasta dados.
+As anotações, marcações e tamanho da fonte salvos no aparelho permanecem no armazenamento local.

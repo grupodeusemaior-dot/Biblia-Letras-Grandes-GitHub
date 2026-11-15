@@ -37,7 +37,7 @@ button:focus-visible{outline:4px solid #efc64f;outline-offset:3px}
 .verse{text-align:justify;text-justify:inter-word;hyphens:auto}
 .verse-text{white-space:normal}
 .verse-mark{background:#ffef75;color:inherit;border-radius:3px;padding:0 .04em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
-.selection-tools{position:fixed;left:50%;transform:translateX(-50%);bottom:max(10px,env(safe-area-inset-bottom));width:min(900px,calc(100% - 20px));z-index:20;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:7px;margin:16px auto;padding:10px;background:#102b55;border:2px solid #e7b83f;border-radius:15px;box-shadow:0 5px 20px #0003}
+.selection-tools{position:sticky;top:calc(92px + env(safe-area-inset-top));left:auto;transform:none;bottom:auto;width:100%;z-index:4;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:7px;margin:12px 0 16px;padding:10px;background:#102b55;border:2px solid #e7b83f;border-radius:15px;box-shadow:0 5px 20px #0003}
 .selection-tools[hidden]{display:none}
 .selection-tools button,.note-actions button,.dialog-actions button{border:0;border-radius:9px;padding:9px 12px;font-weight:800;background:#fff;color:#102b55}
 .selection-tools #highlightSelection{background:#ffef75}
@@ -61,7 +61,7 @@ button:focus-visible{outline:4px solid #efc64f;outline-offset:3px}
 .note-dialog textarea{display:block;width:100%;resize:vertical;border:2px solid #cbd6e6;border-radius:10px;padding:12px;font:inherit;line-height:1.5;color:#172238}
 .note-dialog textarea:focus{outline:3px solid #e7b83f;border-color:#1e477b}
 .dialog-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:15px}
-@media(max-width:480px){.selection-tools{bottom:6px;padding:8px}.selection-hint{width:100%;text-align:center}.selection-tools button{font-size:.9rem;padding:8px}.note-dialog form{padding:17px}}
+@media(max-width:480px){.selection-tools{top:calc(88px + env(safe-area-inset-top));padding:8px}.selection-hint{width:100%;text-align:center}.selection-tools button{font-size:.9rem;padding:8px}.note-dialog form{padding:17px}}
 
 
 /* Correção definitiva: controles A+/A- e leitura justificada */
