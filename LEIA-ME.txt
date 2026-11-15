@@ -1,15 +1,13 @@
-ATUALIZAÇÃO — FERRAMENTAS DE ESTUDO NO TOPO
+BÍBLIA LETRAS GRANDES — MARCAÇÃO DE ATÉ 20 VERSÍCULOS
 
-Esta atualização altera somente a posição da barra que aparece quando um trecho bíblico é selecionado.
+Esta atualização permite selecionar um trecho contínuo que atravesse até 20 versículos do mesmo capítulo e aplicar ou remover a marcação amarela em todos os trechos selecionados. Os números dos versículos também recebem destaque quando estiverem dentro da seleção.
 
-O que mudou:
-- A barra de ferramentas deixa de ficar fixa na parte inferior.
-- Ela passa a aparecer logo abaixo do cabeçalho, na parte superior da área de leitura.
-- Assim, o menu de seleção/pesquisa do Google na parte inferior não encobre os botões.
+ATUALIZAÇÃO NO GITHUB
+1. Extraia este ZIP.
+2. Substitua na raiz do projeto os arquivos app.js, style.css e service-worker.js.
+3. Faça commit das alterações e aguarde a publicação.
+4. Feche e abra novamente o aplicativo ou atualize a página.
 
-Arquivos para substituir na raiz do projeto:
-1. style.css
-2. service-worker.js
+As anotações e marcações existentes continuam no mesmo armazenamento local. Não limpe os dados do navegador nem desinstale o aplicativo.
 
-Não substitua app.js, index.html nem a pasta dados.
-As anotações, marcações e tamanho da fonte salvos no aparelho permanecem no armazenamento local.
+Limite: até 20 versículos consecutivos dentro do mesmo capítulo. A seleção deve começar e terminar no texto dos versículos.

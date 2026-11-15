@@ -182,40 +182,69 @@ function getSelectionData() {
   const selection = window.getSelection();
   if (!selection || selection.isCollapsed || !selection.rangeCount) return null;
   const range = selection.getRangeAt(0);
-  const startEl = range.startContainer.nodeType === 1 ? range.startContainer : range.startContainer.parentElement;
-  const endEl = range.endContainer.nodeType === 1 ? range.endContainer : range.endContainer.parentElement;
-  const startSpan = startEl?.closest?.(".verse-text");
-  const endSpan = endEl?.closest?.(".verse-text");
-  if (!startSpan || startSpan !== endSpan) return null;
-  const verse = startSpan.closest(".verse");
-  const number = Number(verse?.querySelector(".verse-number")?.textContent);
-  const pre = range.cloneRange(); pre.selectNodeContents(startSpan); pre.setEnd(range.startContainer, range.startOffset);
-  const selectedText = range.toString();
-  const start = pre.toString().length;
-  if (!selectedText.trim()) return null;
-  return {book: currentBookKey(), chapter: state.chapter, verse: number, start, end: start + selectedText.length, text: selectedText.trim()};
+  const article = $("verses");
+  if (!article || !article.contains(range.startContainer) || !article.contains(range.endContainer)) return null;
+
+  // Divide a seleção contínua em segmentos independentes, um para cada versículo.
+  // Isso permite marcar trechos que atravessam vários parágrafos/versículos.
+  const segments = [];
+  article.querySelectorAll(".verse-text").forEach(span => {
+    try {
+      const verse = span.closest(".verse");
+      const numberEl = verse?.querySelector(".verse-number");
+      const includeNumber = !!(numberEl && range.intersectsNode(numberEl));
+      if (!range.intersectsNode(span)) return;
+      const contentRange = document.createRange();
+      contentRange.selectNodeContents(span);
+      const part = range.cloneRange();
+      if (part.compareBoundaryPoints(Range.START_TO_START, contentRange) < 0) part.setStart(span, 0);
+      if (part.compareBoundaryPoints(Range.END_TO_END, contentRange) > 0) part.setEnd(span, span.childNodes.length);
+      const selectedText = range.intersectsNode(span) ? part.toString() : "";
+      let start = 0;
+      if (selectedText.length) {
+        const prefix = document.createRange();
+        prefix.selectNodeContents(span);
+        prefix.setEnd(part.startContainer, part.startOffset);
+        start = prefix.toString().length;
+      }
+      const number = Number(numberEl?.textContent);
+      if (!Number.isFinite(number)) return;
+      if (selectedText.length || includeNumber) segments.push({book: currentBookKey(), chapter: state.chapter, verse: number, start, end: start + selectedText.length, includeNumber});
+    } catch (_) {}
+  });
+  if (!segments.length || segments.length > 20) return null;
+  return {
+    book: currentBookKey(), chapter: state.chapter,
+    verse: segments[0].verse, lastVerse: segments[segments.length - 1].verse,
+    segments, text: selection.toString().trim()
+  };
 }
 function updateSelectionTools() {
   if (!$("readingView") || $("readingView").hidden) return;
   const data = getSelectionData();
   $("selectionTools").hidden = !data;
   if (data) state.pendingSelection = data;
+  else state.pendingSelection = null;
+}
+function selectedSegments(data) {
+  if (Array.isArray(data?.segments)) return data.segments;
+  return data ? [{book:data.book, chapter:data.chapter, verse:data.verse, start:data.start, end:data.end}] : [];
 }
 function addHighlight() {
   const data = state.pendingSelection || getSelectionData();
-  if (!data) return;
-  const overlaps = state.highlights.some(h => locationMatches(h, data.book, data.chapter, data.verse) && data.start < h.end && data.end > h.start);
-  if (!overlaps) state.highlights.push({...data, id: noteId(), text: undefined});
-  else {
-    state.highlights = state.highlights.filter(h => !(locationMatches(h, data.book, data.chapter, data.verse) && data.start < h.end && data.end > h.start));
-    state.highlights.push({...data, id: noteId(), text: undefined});
-  }
+  const segments = selectedSegments(data);
+  if (!segments.length || segments.length > 20) return;
+  segments.forEach(segment => {
+    state.highlights = state.highlights.filter(h => !(locationMatches(h, segment.book, segment.chapter, segment.verse) && segment.start < h.end && segment.end > h.start));
+    state.highlights.push({...segment, id: noteId(), text: undefined});
+  });
   saveStudyData(); refreshCurrentChapter(); clearSelection();
 }
 function removeHighlight() {
   const data = state.pendingSelection || getSelectionData();
-  if (!data) return;
-  state.highlights = state.highlights.filter(h => !(locationMatches(h, data.book, data.chapter, data.verse) && data.start < h.end && data.end > h.start));
+  const segments = selectedSegments(data);
+  if (!segments.length) return;
+  state.highlights = state.highlights.filter(h => !segments.some(segment => locationMatches(h, segment.book, segment.chapter, segment.verse) && segment.start < h.end && segment.end > h.start));
   saveStudyData(); refreshCurrentChapter(); clearSelection();
 }
 function clearSelection() {
